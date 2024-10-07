@@ -1,0 +1,75 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-image: url('sostenible.png'); /* Fondo del menú */
+    background-repeat: no-repeat; /* Evitar repetición */
+    background-size: cover; /* Cubrir todo el fondo */
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.menu-container {
+    text-align: center;
+}
+
+.character-selection {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+.character-selection img {
+    width: 134px; /* Asegúrate que ambos personajes tengan el mismo tamaño */
+    height: 220px; /* Añadido para que la altura sea igual */
+    margin: 0 10px;
+    cursor: pointer; /* Cambiar el cursor al pasar sobre el personaje */
+    transition: transform 0.3s ease; /* Efecto de animación */
+}
+
+.character-selection img:hover {
+    transform: scale(1.1); /* Ampliar el personaje al pasar el mouse */
+}
+
+.selection-box {
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.8), rgba(255, 215, 0, 0.8));
+    border-radius: 15px;
+    padding: 15px;
+    margin: 20px 0;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+#selection-text {
+    font-size: 1.5em;
+    margin: 0;
+    animation: fadeIn 1s; /* Animación de entrada */
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+#display-confetti {
+    padding: 1.5em 3em;
+    border-radius: 3em;
+    border: none;
+    cursor: pointer;
+    color: white;
+    font-size: 1.5em;
+    background: linear-gradient(135deg, rgba(255, 99, 71, 0.8), rgba(255, 215, 0, 0.8));
+    backdrop-filter: blur(5px);
+    transition: transform 0.3s ease, background 0.3s ease;
+}
+
+#display-confetti:hover {
+    transform: scale(1.05);
+    background: linear-gradient(135deg, rgba(255, 99, 71, 1), rgba(255, 215, 0, 1));
+}
