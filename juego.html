@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Juego de Prácticas Sostenibles</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+        }
+        #gameCanvas {
+            display: block;
+            margin: 0 auto;
+            background-color: transparent; /* Asegura que el fondo del canvas sea transparente */
+        }
+        #message {
+            display: none; /* Ocultar inicialmente */
+            position: absolute;
+            top: 40%; /* Ajustar la posición para centrarlo más */
+            left: 50%;
+            transform: translate(-50%, -50%);
+            z-index: 10;
+            width: 300px; /* Ajustar el ancho del cuadro de mensaje */
+            text-align: center; /* Centrar el texto */
+            background-color: transparent;
+            padding: 10px;
+        }
+        .button {
+            position: absolute;
+            z-index: 20;
+            background-color: transparent; /* Botones visibles con fondo rojo semitransparente */
+            border: none;
+            cursor: pointer;
+        }
+        #buttonSi {
+            display: none; /* Ocultar inicialmente */
+            top: 45%; /* Ajusta la posición vertical */
+            left: 45%; /* Ajusta la posición horizontal */
+            width: 65px;
+            height: 40px;
+        }
+        #buttonNo {
+            display: none; /* Ocultar inicialmente */
+            top: 45%;
+            left: 51.6%;
+            width: 65px;
+            height: 40px;
+        }
+    </style>
+</head>
+<body>
+    <canvas id="gameCanvas" width="800" height="600"></canvas>
+    <img id="message" src="mensaje.png" alt="Mensaje del personaje">
+    
+    <!-- Botones visibles para "Sí" y "No" -->
+    <button id="buttonSi" class="button" onclick="handleSi()"></button>
+    <button id="buttonNo" class="button" onclick="handleNo()"></button>
+
+    <script src="script2.js"></script>
+</body>
+</html>
+

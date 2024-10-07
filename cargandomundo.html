@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cargando Mundo</title>
+    <style>
+        body, html {
+            margin: 0;
+            padding: 0;
+            height: 100%;
+            overflow: hidden;
+            background-color: #000; /* Fondo negro para la pantalla de carga */
+        }
+        #loadingVideo {
+            display: block;
+            margin: 0 auto;
+            width: 100%; /* Ajusta el video al 100% del ancho */
+            height: 100%; /* Ajusta el video al 100% de la altura */
+            object-fit: cover; /* Asegura que el video cubra toda la pantalla */
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Video de carga -->
+    <video id="loadingVideo" autoplay muted>
+        <source src="cargando.mp4" type="video/mp4">
+        Tu navegador no soporta la reproducción de videos.
+    </video>
+
+    <script>
+        // Cuando el video termine, redirigir al mundo nuevo
+        document.getElementById('loadingVideo').addEventListener('ended', function() {
+            window.location.href = "mundonuevo.html"; // Redirige a la página del nuevo mundo
+        });
+    </script>
+
+</body>
+</html>

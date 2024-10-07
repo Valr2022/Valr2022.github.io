@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nivel 2: Uso de Electrodomésticos</title>
+    <style>
+        body {
+            font-family: 'Pixel', sans-serif;
+            background-color: #f0f0f0;
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+        }
+        #gameCanvas {
+            display: block;
+            margin: 0 auto;
+            background-image: url('background2.png'); /* Fondo sin la lavadora */
+            background-size: cover;
+        }
+        #feedback {
+            display: none;
+            position: absolute;
+            top: 20%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            z-index: 20;
+            background-color: rgba(255, 255, 255, 0.9);
+            color: black;
+            font-size: 18px;
+            padding: 20px;
+            border: 2px solid black;
+            border-radius: 10px;
+        }
+        .option-button {
+            background-color: white;
+            border: 2px solid black;
+            font-size: 18px;
+            padding: 10px;
+            margin: 5px;
+            cursor: pointer;
+        }
+        #options {
+            display: block;
+            position: absolute;
+            bottom: 67%;
+            left: 50%;
+            transform: translate(-50%, 0);
+            text-align: center;
+        }
+        #scoreDisplay {
+            position: absolute;
+            top: 10px;
+            left: 590px;
+            font-size: 20px;
+            font-weight: bold;
+            color: black;
+        }
+    </style>
+</head>
+<body>
+    <canvas id="gameCanvas" width="800" height="600"></canvas>
+    <div id="feedback"></div>
+    <div id="options">
+        <button class="option-button" onclick="chooseOption(1)">Utilizar la lavadora en su ciclo de agua caliente</button>
+        <button class="option-button" onclick="chooseOption(2)">Usar el ciclo de agua fría en la lavadora</button>
+    </div>
+    <div id="scoreDisplay"></div>
+    <script src="script3.js"></script>
+</body>
+</html>
+
